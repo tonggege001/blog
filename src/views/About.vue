@@ -1,5 +1,63 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-</template>
+  <div class="titleBox">关于</div>
+  <div class="MainContainer">
+    <div class="About">
+      <h2>通哥哥</h2>
+      <p>性别：男 出生年月：1998年4月 邮箱：wontun12@gmail.com</p>
+      <h2>教育经历</h2>
+      <p>
+        <ul>
+          <li>华中科技大学 计算机科学与技术学院 计算机科学与技术专业 2016-2020 学士学位</li>
+          <li>南京大学 计算机科学与技术系 计算机软件与理论专业 2020-今 攻读硕士研究生</li>
+        </ul>
+      </p>
+      <h2>工作经历</h2>
+      <p>
+        <ul>
+          <li>
+            华中科技大学计算机科学与技术学院<br>
+            <ul><li>本科生助教 （17级数据结构、16 and 17级数据结构二学位、17级计算机网络）</li></ul>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            字节跳动（武汉）<br>
+            <ul><li>后端开发实习生</li></ul>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            深圳市腾讯计算机系统有限公司<br>
+            <ul><li>后端开发实习生</li></ul>
+          </li>
+        </ul>
+      </p>
+      <h2>通哥哥的技能</h2>
+      <p>
+        懂点后端、懂点深度学习、懂点软件开发、懂点爬虫、懂点前端、懂点微信小程序<br/>
+        想学经济金融、想做数据分析，喜欢看些新奇好玩的商业模式
+      </p>
+    </div>
+
+  </div> 
+</template>  
+
+<script>
+export default {
+  name: "About"
+}
+</script>
+
+<style>
+.About {
+  color: #dddddd;
+  padding: 2rem 4rem 2rem 4rem;
+}
+
+.About li{
+  text-align: left;
+}
+</style>
+

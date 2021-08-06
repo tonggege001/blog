@@ -3,18 +3,45 @@ import Home from '../views/Home.vue'
 
 const routes = [
   {
-    path: '/',
+    path: "",
+    redirect: "/home",
+    
+  },
+  {
+    path: '/home',
     name: 'Home',
-    component: Home
+    component: Home,
+  },
+  {
+    path: "/archive",
+    name: "Archive",
+    component: () => import("../views/Archive.vue"),
+  },
+  {
+    path: "/tags",
+    name: "Tags",
+    component: () => import("../views/Tags.vue"),
+  },
+  {
+    path: "/tags/:tagname",
+    name: "TagsSearch",
+    component: () => import("../views/TagsSearch.vue"),
+  },
+  {
+      path: "/milestone",
+      name: "Milestone",
+      component: () => import("../views/Milestone.vue"),
   },
   {
     path: '/about',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    component: () => import('../views/About.vue')
+  },
+  {
+    path: "/post/:postid",
+    name: "Post",
+    component: () => import("../views/Post.vue"),
+  },
 ]
 
 const router = createRouter({

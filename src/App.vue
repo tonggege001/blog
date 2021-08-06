@@ -1,10 +1,32 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <nav-bar></nav-bar>
   <router-view/>
 </template>
+
+<script>
+import NavBar from './components/NavBar.vue'
+import axios from 'axios'
+import 'es6-promise/auto'
+import store from "./store"
+
+
+export default {
+  components: {NavBar},
+  store: store,
+
+  created(){
+    axios
+      .get("./__post/meta")
+      .then(response => {
+          this.$store.commit("InitialData", response.data);
+
+      }).catch(error => {
+        console.log(error);
+      })
+  },
+}
+</script>
+
 
 <style>
 #app {
@@ -15,16 +37,12 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
+body{
+  margin: 0;
+  padding: 0;
+  font: 300 21px Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #333333;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

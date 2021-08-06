@@ -1,0 +1,32 @@
+.MainContainer{
+    width: 80%;
+    border-radius: 0.5rem;
+    background-color: #444444;
+    box-sizing: border-box;
+    /* 使div居中 */
+    margin: 1rem auto;  
+}
+
+h2{
+    color: #dddddd;
+    font-weight: 500;
+    text-align: left;
+}
+
+h3{
+    color: #dddddd;
+    text-align: left;
+    font-weight: 500;
+}
+
+p{
+    font-size: 1.3rem;
+    color: #dddddd;
+    font-weight: 345;
+    text-align: left;
+}
+
+
+
+
+
